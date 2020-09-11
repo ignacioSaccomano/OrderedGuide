@@ -1,56 +1,63 @@
 '''
     Ignacio Saccomano 2020
 
-    Este programa busca ordenar los ejercicios de una guía y decirle al usuario cuántos le falta hacer en caso de que así sea.
-    Todo esto con tan solo introducir los ejercicios hechos uno por uno.
+    This program program´s main function is to sort the exercises from lowest to highest, and if the student´s guide is incomplete, the program also 
+    tells how many are yet to be done and which (if so, of course).
+
+    Then, the program asks the user how many exercises are needed to hand in, if so, and calculates accurately (to two decimals) how likely you are 
+    to be asked for an exercise you couldn´t do.
 '''
 
-ejercicios = []     # Creo lista de todos los ejercicios que hizo el usuario
-total = []         # Lista del total de los ejercicios presentes en la guía para luego comparar con lo que hizo el usuario.
+
+exercises = []     # Create list of user´s done exercises.
+total = []         # List of total exercises to do in the guide.
 
 
-many = int(input("Cuántos ejercicios son? "))   # Tamaño de la lista de los ejercicios totales.
+many = int(input("How many exercises do you have to do? "))   # Total exercises to do.
+
+def bad_luck(n):
+    num = len(exercises)
+    div = many
+    stat = num / div
+
+    if stat == 0:
+        return "100"
+    else:
+        for i in range(n - 1):
+            stat *= (num - 1) / (div - 1)
+    return str(round((100 - stat * 100), 2))
 
 while True:
     try:
-        data = int(input("Ejercicio: "))        # El usuario pone los ejercicios que hace y apreta enter. Cuando termina apreta enter sin poner nada.
+        data = int(input("Exercise: "))        # The user puts the number of the exercise done. If not, or if it ended, hits enter without putting any value.
     except:
         break
-    ejercicios.append(data) # Se agrega a la lista de los ejercicios lo que pone el usuario
+    exercises.append(data) # Adds each excercise to done list.
 
-ejercicios = list(dict.fromkeys(ejercicios)) # En caso de que haya puesto 2 veces lo mismo, acá se corrige.
+    # TODO: Fix empty value taken as one.
 
-print("Estos son los ejercicios que hiciste en orden: " + str(sorted(ejercicios)))  # Se muestran los ejercicios hechos en orden.
+exercises = list(dict.fromkeys(exercises)) # Delete duplicates if any.
 
-if len(ejercicios) == many:     # Se verifica si el usuario termino de hacer los ejercicios o no.
-    print("Felicidades, ya terminaste el TP ;) \nAhora a disfrutar")
+print("This are the exercises you did (ordered): " + str(sorted(exercises)))  # Shows sorted exercises.
+
+if len(exercises) == many:     # Verifies if user is done.
+    print("Congratulations, you finished ;) \nNow enjoy!")
 else:
     for i in range(many):
-        total.append(i + 1)    # Se crea una lista con el total de los ejercicios de la guía para deducir cuántos y cuáles faltan
+        total.append(i + 1)    # Creates a list composed of all exercises from the guide to compare after.
 
-    missing = many - len(ejercicios)
+    missing = many - len(exercises)
 
-    restantes = list(set(total) - set(ejercicios))  # Lista de los ejercicios que le quedan por hacer
+    remain = list(set(total) - set(exercises))  # List of excercises missing.
 
-    done = (len(ejercicios)/many) * 100   # Porcentaje de la guía hecha.
+    done = (len(exercises)/many) * 100   # Percentage of the total guide done.
 
-    print("Te faltan hacer " + str(missing) + " ejercicios.")
-    print("\nEsos ejercicios son: " + str(sorted(restantes)))
-    print("Hiciste el " + str(int(done)) + "% de la guía.")
+    print("There are " + str(missing) + " exercises missing.")
+    print("\nThose are: " + str(sorted(remain)))
+    print("You did " + str(int(done)) + "% of the guide.")
 
-    luck = int(input("Cuántos ejercicios va a pedir?"))
+    luck = int(input("How many exercises do you need to hand in? "))
+    
+    print("The probabilities you will be asked to hand in something you didn´t do are " + bad_luck(luck) + "%")   # Probabilidad de que te pida un ejercicio que no hiciste.
+    
 
-    print("La probabilidad de que te pida algo que no hayas hecho es del " + bad_luck(luck) + "%")   # Probabilidad de que te pida un ejercicio que no hiciste.
-    # IDEA: Agregar función que calcule la probabilidad de que te pida un ejercicio que no hayas hecho.
-
-    def bad_luck(n):
-        num = len(ejercicios)
-        div = many
-        stat = num / div
-
-        if stat == 0:
-            return 0
-        else:
-            for i in range(n - 1):
-                stat *= (num - 1) / (div - 1)
-        return str(100 - stat * 100)
