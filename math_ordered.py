@@ -11,6 +11,18 @@ total = []         # Lista del total de los ejercicios presentes en la guía par
 
 many = int(input("Cuántos ejercicios son? "))   # Tamaño de la lista de los ejercicios totales.
 
+def bad_luck(n):
+        num = len(ejercicios)
+        div = many
+        stat = num / div
+
+        if stat == 0:
+            return "100"
+        else:
+            for i in range(n - 1):
+                stat *= (num - 1) / (div - 1)
+        return str(100 - stat * 100)
+
 while True:
     try:
         data = int(input("Ejercicio: "))        # El usuario pone los ejercicios que hace y apreta enter. Cuando termina apreta enter sin poner nada.
@@ -38,19 +50,7 @@ else:
     print("\nEsos ejercicios son: " + str(sorted(restantes)))
     print("Hiciste el " + str(int(done)) + "% de la guía.")
 
-    luck = int(input("Cuántos ejercicios va a pedir?"))
+    luck = int(input("Cuántos ejercicios va a pedir? "))
 
     print("La probabilidad de que te pida algo que no hayas hecho es del " + bad_luck(luck) + "%")   # Probabilidad de que te pida un ejercicio que no hiciste.
     # IDEA: Agregar función que calcule la probabilidad de que te pida un ejercicio que no hayas hecho.
-
-    def bad_luck(n):
-        num = len(ejercicios)
-        div = many
-        stat = num / div
-
-        if stat == 0:
-            return 0
-        else:
-            for i in range(n - 1):
-                stat *= (num - 1) / (div - 1)
-        return str(100 - stat * 100)
