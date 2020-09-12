@@ -25,7 +25,7 @@ def bad_luck(n):
     else:
         for i in range(n - 1):
             stat *= (num - 1) / (div - 1)
-    return str(round((100 - stat * 100), 2))
+    return str(round(100 - stat * 100))
 
 while True:
     try:
