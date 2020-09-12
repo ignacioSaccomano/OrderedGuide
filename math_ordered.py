@@ -58,6 +58,6 @@ else:
 
     luck = int(input("How many exercises do you need to hand in? "))
     
-    print("The probabilities you will be asked to hand in something you didn´t do are " + bad_luck(luck) + "%")   # Probabilidad de que te pida un ejercicio que no hiciste.
+    print("The probabilities you will be asked to hand in something you didn´t do are " + bad_luck(luck) + "%")
     
 
