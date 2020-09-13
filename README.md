@@ -1,13 +1,13 @@
 # OrderMath
 
-## What is this about?
-Ok. So you were given a guide of exercises or activities to do and some will be chosen, at random, to correct. Now, you start working and skipping activities here and there till you realise how hard it will be to verify which ones are missing. Now we have a problem. We had. With this program, you just have to write down each exercise you did, one by one no matter the order, to view them ordered and check how many and which ones are missing.
+## ¿De qué se trata?
+Ok. Te acaban de dar una guía de ejercicios o actividades para hacer y algunas van a ser elegidas, de manera aleatoria, para corregir. Ahora bien, empezás trabajando y salteandote algunas actividades acá y allá hasta que te das cuenta de lo difícil que va a ser verificar cuántas y cuáles te faltan. Tenemos un problema. Bueno, teníamos. Gracias a este programa, ahora solamente tenés que ir anotando los ejercicios que fuiste haciendo, uno por uno y sin importar el orden, para posteriormente verlos ordenados y además que el programa te diga cuántos y cuáles te faltan específicamente.
 
-## Just that?
-Esentially yes. Or not (music from [vsauce](https://www.youtube.com/user/Vsauce)). The more i did, the more i wanted. So aditionally, after knowing the order and the missing exercises, you can specify how many you have to hand in so that the program tells you how likely it is for you to be asked for an exercise you haven´t done.
+## ¿Solo eso?
+Esencialmente sí. O no (musica de [vsauce](https://www.youtube.com/user/Vsauce)). Cuánto más hacía más quería. Así que adicionalmente, después de saber el orden y los ejercicios restantes, podés especificar cuántos tenés que entregar así el programa te dice qué tan probable es que te pidan algo que no hayas hecho.
 
-## Project conclusion
-This is intended for any student, lazy ones specially. Not only because of its efficiency but specially for the part of calculating the odds of you being "busted", sort of speak. We were all there. At the moment i am in that sort of situation, and i thought someone had to do it.
+## Conclusión del proyecto
+Este proyecto es para cualquier estudiante, a nuestros buenos amigos los vagos especialmente. No solo por su eficiencia, pero especialmente por la parte del cálculo de las probabilidades de vos siendo "sorprendido", por así decirlo. Todos estuvimos ahí. Por el momento yo me encuentro en esa clase de situación, y pensé que alguien tenía que hacerlo.
 
-## Future
-Not planning anything interesting rn. Maybe will optimize it a little.
+## Futuro
+No estoy planeando nada interesante por el momento. Probablemente lo optimice un poco.
