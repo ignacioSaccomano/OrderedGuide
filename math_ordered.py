@@ -23,18 +23,20 @@ def bad_luck(n):
     if stat == 0:
         return "100"
     else:
-        for i in range(n - 1):
+        for _ in range(n - 1):
             stat *= (num - 1) / (div - 1)
     return str(round(100 - stat * 100))
 
 while True:
     try:
-        data = int(input("Exercise: "))        # The user puts the number of the exercise done. If not, or if it ended, hits enter without putting any value.
-    except:
-        break
-    exercises.append(data) # Adds each excercise to done list.
+        data = list(map(int, input("Exercise ").split("-")))        # El usuario pone los ejercicios que hace y apreta enter. Cuando termina apreta enter sin poner nada.
+        
+        if len(data) > 1:
+            data = list(range(data[0], data[-1] + 1))
 
-    # TODO: Fix empty value taken as one.
+        exercises.extend(data)
+    except ValueError:
+        break
 
 exercises = list(dict.fromkeys(exercises)) # Delete duplicates if any.
 
