@@ -29,7 +29,7 @@ def bad_luck(n):
 
 while True:
     try:
-        data = list(map(int, input("Exercise ").split("-")))        # El usuario pone los ejercicios que hace y apreta enter. Cuando termina apreta enter sin poner nada.
+        data = list(map(int, input("Exercise ").split("-")))
         
         if len(data) > 1:
             data = list(range(data[0], data[-1] + 1))
