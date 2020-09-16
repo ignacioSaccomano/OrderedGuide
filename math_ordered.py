@@ -19,14 +19,14 @@ def bad_luck(n):
         if stat == 0:
             return "100"
         else:
-            for i in range(n - 1):
+            for _ in range(n - 1):
                 stat *= (num - 1) / (div - 1)
         return str(round(100 - stat * 100))
 
 while True:
     try:
         data = int(input("Ejercicio: "))        # El usuario pone los ejercicios que hace y apreta enter. Cuando termina apreta enter sin poner nada.
-    except:
+    except ValueError:
         break
     ejercicios.append(data) # Se agrega a la lista de los ejercicios lo que pone el usuario
 
