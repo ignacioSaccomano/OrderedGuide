@@ -25,10 +25,14 @@ def bad_luck(n):
 
 while True:
     try:
-        data = int(input("Ejercicio: "))        # El usuario pone los ejercicios que hace y apreta enter. Cuando termina apreta enter sin poner nada.
+        data = list(map(int, input("Ejercicio ").split("-")))        # El usuario pone los ejercicios que hace y apreta enter. Cuando termina apreta enter sin poner nada.
+        
+        if len(data) > 1:
+            data = list(range(data[0], data[-1] + 1))
+
+        ejercicios.extend(data)
     except ValueError:
         break
-    ejercicios.append(data) # Se agrega a la lista de los ejercicios lo que pone el usuario
 
 ejercicios = list(dict.fromkeys(ejercicios)) # En caso de que haya puesto 2 veces lo mismo, acá se corrige.
 
