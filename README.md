@@ -14,4 +14,4 @@ No estoy planeando nada interesante por el momento. Probablemente lo optimice un
 
 ## Ramas
 * La rama principal está en español, pero creé una secundaria (idéntica a la original) en inglés para que más usuarios puedan usar el programa y aprender su funcionamiento.
-* The main branch is in spanish, but i created a secondary one (identic to the original) in enlish so that more users can access the code and understand how it works.
+* The main branch is in spanish, but i created a secondary one (identic to the original) in english so that more users can access the code and understand how it works.
