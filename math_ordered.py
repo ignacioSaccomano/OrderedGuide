@@ -6,8 +6,6 @@
 '''
 
 ejercicios = []     # Creo lista de todos los ejercicios que hizo el usuario
-total = []         # Lista del total de los ejercicios presentes en la guía para luego comparar con lo que hizo el usuario.
-
 
 many = int(input("Cuántos ejercicios son? "))   # Tamaño de la lista de los ejercicios totales.
 
@@ -41,8 +39,7 @@ print("Estos son los ejercicios que hiciste en orden: " + str(sorted(ejercicios)
 if len(ejercicios) == many:     # Se verifica si el usuario termino de hacer los ejercicios o no.
     print("Felicidades, ya terminaste el TP ;) \nAhora a disfrutar")
 else:
-    for i in range(many):
-        total.append(i + 1)    # Se crea una lista con el total de los ejercicios de la guía para deducir cuántos y cuáles faltan
+    total = list(range(1, many + 1))    # Se crea una lista con el total de los ejercicios de la guía para deducir cuántos y cuáles faltan
 
     missing = many - len(ejercicios)
 
