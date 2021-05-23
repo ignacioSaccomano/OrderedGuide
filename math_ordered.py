@@ -14,17 +14,17 @@ def bad_luck(n):
         div = many
         stat = num / div
 
-        if stat == 0:
+        if stat == 0 or n == many:
             return "100"
         else:
             for _ in range(n - 1):
                 stat *= (num - 1) / (div - 1)
-        return str(round(100 - stat * 100))
+            return str(round(100 - stat * 100))
 
 while True:
     try:
         data = list(map(int, input("Ejercicio ").split("-")))        # El usuario pone los ejercicios que hace y apreta enter. Cuando termina apreta enter sin poner nada.
-        
+
         if len(data) > 1:
             data = list(range(data[0], data[-1] + 1))
 
