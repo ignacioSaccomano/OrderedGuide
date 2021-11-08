@@ -2,7 +2,7 @@
     Ignacio Saccomano 2020
 
     Este programa busca ordenar los ejercicios de una guía y decirle al usuario cuántos le falta hacer en caso de que así sea.
-    Todo esto con tan solo introducir los ejercicios hechos uno por uno.
+    Todo esto con tan solo introducir los ejercicios hechos uno por uno o en forma de intervalo. Ej: 20 [enter] 21 [enter] 22 [enter] O 20 - 22.
 '''
 
 ejercicios = []     # Creo lista de todos los ejercicios que hizo el usuario
@@ -54,4 +54,3 @@ else:
     luck = int(input("Cuántos ejercicios va a pedir? "))
 
     print("La probabilidad de que te pida algo que no hayas hecho es del " + bad_luck(luck) + "%")   # Probabilidad de que te pida un ejercicio que no hiciste.
-    # IDEA: Agregar función que calcule la probabilidad de que te pida un ejercicio que no hayas hecho.
