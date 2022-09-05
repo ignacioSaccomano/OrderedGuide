@@ -10,16 +10,15 @@ ejercicios = []     # Creo lista de todos los ejercicios que hizo el usuario
 many = int(input("Cuántos ejercicios son? "))   # Tamaño de la lista de los ejercicios totales.
 
 def bad_luck(n):
-        num = len(ejercicios)
-        div = many
-        stat = num / div
+    num = len(ejercicios)
 
-        if stat == 0 or n == many:
-            return "100"
-        else:
-            for _ in range(n - 1):
-                stat *= (num - 1) / (div - 1)
-            return str(round(100 - stat * 100))
+    if  n == many:
+        return "100"
+    else:
+        stat = 1
+        for i in range(n):
+            stat *= (num - i) / (many - i)
+        return str(100 - stat * 100)
 
 while True:
     try:
