@@ -1,4 +1,4 @@
-# OrderMath
+# OrderedGuide
 
 ## ¿De qué se trata?
 Te acaban de dar una guía de ejercicios o actividades para hacer y algunas van a ser elegidas, de manera aleatoria, para corregir. Ahora bien, empezás trabajando y salteandote algunas actividades, delegandolas a tu 'yo' del futuro hasta que te das cuenta de lo difícil que va a ser verificar cuántas y cuáles te faltan. Tenemos un problema. Bueno, teníamos. Gracias a este ultra mega hiper super duper programa, ahora solamente tenés que ir anotando los ejercicios que fuiste haciendo, uno por uno o en forma de intervalo y sin importar el orden, para posteriormente verlos ordenados y además que el programa te diga cuántos y cuáles te faltan específicamente.
